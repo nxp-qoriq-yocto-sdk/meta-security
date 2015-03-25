@@ -4,11 +4,11 @@ SECTION = "security"
 LICENSE = "LGPL-2.1"
 LIC_FILES_CHKSUM = "file://LICENSE;beginline=0;endline=1;md5=8eac08d22113880357ceb8e7c37f989f"
 
-SRCREV = "bd10aab13c7248cc0df57512617e33d6743d33a6"
+SRCREV = "0843a460f72da50756432a021c387fe8a7ab0bd5"
 
 PV = "2.2.0+git${SRCPV}"
 
-SRC_URI = "git://github.com/seccomp/libseccomp.git;protocol=http"
+SRC_URI = "git://github.com/seccomp/libseccomp.git;protocol=http;branch=working-ppc64"
 
 S = "${WORKDIR}/git"
 
@@ -18,6 +18,6 @@ PACKAGECONFIG ??= ""
 PACKAGECONFIG[python] = "--enable-python, --disable-python, python"
 
 # PowerPC is not supported in this version.
-COMPATIBLE_HOST = '(x86_64|i.86|arm|arm64|mips|mips64).*-linux'
+COMPATIBLE_HOST = '(x86_64|i.86|arm|arm64|mips|mips64|powerpc).*-linux'
 
 RDEPENDS_${PN} = "bash"
