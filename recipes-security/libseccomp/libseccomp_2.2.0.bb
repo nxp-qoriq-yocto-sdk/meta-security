@@ -8,7 +8,9 @@ SRCREV = "0843a460f72da50756432a021c387fe8a7ab0bd5"
 
 PV = "2.2.0+git${SRCPV}"
 
-SRC_URI = "git://github.com/seccomp/libseccomp.git;protocol=http;branch=working-ppc64"
+SRC_URI ="git://github.com/seccomp/libseccomp.git;protocol=http;branch=working-ppc64 \
+          file://arm-add-some-missing-syscalls.patch \
+          "
 
 S = "${WORKDIR}/git"
 
